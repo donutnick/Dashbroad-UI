@@ -1,0 +1,30 @@
+{
+  "/api/auth/users/*": {
+    "target": "http://192.168.2.136:8180",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/auth": ""
+    }
+  },
+  "/api/auth/tokens*": {
+    "target": "http://192.168.2.136:8180",
+    "secure": false,
+    "pathRewrite": {
+      "^/api/auth": ""
+    }
+  },
+  "/api/things/*": {
+    "target": "http://192.168.2.136:8182",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/api/channels/*": {
+    "target": "http://192.168.2.136:8182",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}
